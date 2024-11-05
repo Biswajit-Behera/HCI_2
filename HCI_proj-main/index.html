@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adaptive Learning Platform</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">
+            <img src="logo.jpeg" alt="Smart UI Logo" style="height: 40px;">
+            <span style="font-size: 24px; color: #fff; margin-left: 10px;">Smart UI</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#header">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#footer">Blog</a></li>
+        </ul>
+
+        <div class="auth-buttons">
+            <button class="login" onclick="location.href='login.html'">Login</button>
+            <button class="signup" onclick="location.href='signup.html'">Signup</button>
+        </div>
+
+    </nav>
+
+    <!-- Header Section -->
+    <header class="header" id="header">
+        <h1><span id="typed-text"></span></h1>
+        <button class="btn-get-started" onclick="location.href='signup.html'">GET STARTED</button>
+    </header>
+
+
+    <!-- Main Section with Course Cards -->
+    <section class="main-content" id="courses">
+        <h2>Top Courses</h2>
+        <div class="course-cards">
+            <div class="card" onmouseenter="showDetails('ai')" onmouseleave="hideDetails('ai')">
+                <img src="1.png" alt="Constructive AI Course">
+                <h3>Constructive AI</h3>
+                <p>Building Intelligence with Constructive AI</p>
+                <div class="course-details" id="ai-details" style="display: none;">
+                    <p>This course offers a comprehensive introduction to Artificial Intelligence, focusing on constructive approaches like machine learning and neural networks. Students will work on projects involving AI models, exploring how AI can be applied to solve real-world problems.</p>
+                    <p>Benefits of this course include:</p>
+                    <ul>
+                        <li>Foundational knowledge of AI principles and techniques</li>
+                        <li>Practical experience with AI model development</li>
+                        <li>Preparation for careers in AI and machine learning</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="readCourse('Building Intelligence with Constructive AI', 'This course offers a comprehensive introduction to Artificial Intelligence, focusing on constructive approaches like machine learning and neural networks. Students will work on projects involving AI models, exploring how AI can be applied to solve real-world problems. Benefits include foundational knowledge of AI principles, practical experience with model development, and preparation for AI careers.')">
+                    <i class="fa fa-volume-up"></i></button>
+            </div>
+    
+            <div class="card" onmouseenter="showDetails('hci')" onmouseleave="hideDetails('hci')">
+                <img src="6.jpeg" alt="Human-Computer Interaction Course">
+                <h3>Human-Computer Interaction</h3>
+                <p>Exploring Human-Centric Technology Design</p>
+                <div class="course-details" id="hci-details" style="display: none;">
+                    <p>This course focuses on designing and evaluating user-friendly interfaces for digital systems. Students will explore principles of user experience (UX) and usability testing, learning to create applications that are intuitive and accessible.</p>
+                    <p>Benefits of this course include:</p>
+                    <ul>
+                        <li>Strong foundation in UX/UI design principles</li>
+                        <li>Skills in prototyping and user testing</li>
+                        <li>Preparation for careers in interface design and user experience</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="readCourse('Exploring Human-Centric Technology Design', 'This course focuses on designing and evaluating user-friendly interfaces for digital systems. Students will explore principles of user experience (UX) and usability testing, learning to create applications that are intuitive and accessible. Benefits include a strong foundation in UX/UI design, skills in prototyping, and preparation for UX careers.')">
+                    <i class="fa fa-volume-up"></i></button>
+            </div>
+    
+            <div class="card" onmouseenter="showDetails('dsa')" onmouseleave="hideDetails('dsa')">
+                <img src="5.jpg" alt="Data Structures and Algorithms Course">
+                <h3>Data Structures & Algorithms</h3>
+                <p>Mastering Data Structures and Algorithms</p>
+                <div class="course-details" id="dsa-details" style="display: none;">
+                    <p>This course dives deep into fundamental data structures and algorithms. Students will develop efficient problem-solving techniques, learning how to optimize code for speed and efficiency, which are essential for technical interviews and competitive programming.</p>
+                    <p>Benefits of this course include:</p>
+                    <ul>
+                        <li>Strong foundation in essential data structures and algorithms</li>
+                        <li>Enhanced coding and problem-solving skills</li>
+                        <li>Better preparation for technical interviews and coding competitions</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="readCourse('Mastering Data Structures and Algorithms', 'This course dives deep into fundamental data structures and algorithms. Students will develop efficient problem-solving techniques, learning how to optimize code for speed and efficiency, which are essential for technical interviews and competitive programming. Benefits include a strong foundation in data structures, improved problem-solving skills, and preparation for technical interviews.')">
+                    <i class="fa fa-volume-up"></i></button>
+            </div>
+    
+            <div class="card" onmouseenter="showDetails('dbms')" onmouseleave="hideDetails('dbms')">
+                <img src="4.jpg" alt="Database Management System Course">
+                <h3>Database Management System</h3>
+                <p>Learn Database Management</p>
+                <div class="course-details" id="dbms-details" style="display: none;">
+                    <p>This course covers the design, implementation, and management of databases, exploring relational databases, SQL, and data modeling. Students will learn how to structure, retrieve, and manipulate data efficiently in database systems.</p>
+                    <p>Benefits of this course include:</p>
+                    <ul>
+                        <li>Solid understanding of database concepts and SQL</li>
+                        <li>Skills in data organization and management</li>
+                        <li>Preparation for careers in database administration and data analysis</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="readCourse('Learn Database Management', 'This course covers the design, implementation, and management of databases, exploring relational databases, SQL, and data modeling. Students will learn how to structure, retrieve, and manipulate data efficiently in database systems. Benefits include a solid understanding of database concepts, skills in data management, and preparation for database careers.')">
+                    <i class="fa fa-volume-up"></i></button>
+            </div>
+    
+            <div class="card" onmouseenter="showDetails('computer-science')"
+                onmouseleave="hideDetails('computer-science')">
+                <img src="3.jpeg" alt="Computer Science Course">
+                <h3>Computer Science</h3>
+                <p>Learn Computer Science</p>
+                <div class="course-details" id="computer-science-details" style="display: none;">
+                    <p>This computer science course introduces students to programming, algorithms, and data structures. It focuses on hands-on projects and real-world applications, preparing students for careers in technology and innovation.</p>
+                    <p>Benefits of this course include:</p>
+                    <ul>
+                        <li>Fundamental programming skills</li>
+                        <li>Problem-solving capabilities</li>
+                        <li>Career readiness in tech industries</li>
+                    </ul>
+                </div>
+                <button
+                    onclick="readCourse('Learn Computer Science', 'This computer science course introduces students to programming, algorithms, and data structures. It focuses on hands-on projects and real-world applications, preparing students for careers in technology and innovation. Benefits include fundamental programming skills, problem-solving capabilities, and career readiness in tech industries.')">
+                    <i class="fa fa-volume-up"></i></button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer" id="footer">
+        <p>Providing Education Creating Values.</p>
+        <div class="subscribe-container">
+            <input type="email" placeholder="Your Email" class="email-input">
+            <button class="btn-subscribe">Subscribe</button>
+        </div>
+        <div class="footer-links">
+            <div>About Us</div>
+            <div>Contact Us</div>
+            <div>Videos</div>
+            <div>Social Media</div>
+        </div>
+        <p></p>
+    </footer>
+
+
+    <!-- Adaptability Control Button -->
+    <button id="toggle-control-panel" onclick="toggleControlPanel()">Customize UI</button>
+
+    <!-- Adaptability Control Panel -->
+    <div class="control-panel" id="control-panel" style="display: none;">
+        <h3>Customize UI</h3>
+        <label for="font-size">Font Size:</label>
+        <input type="range" id="font-size" min="12" max="24" value="16" onchange="changeFontSize(this.value)">
+
+        <label for="font-color">Font Color:</label>
+        <input type="color" id="font-color" onchange="changeFontColor(this.value)">
+
+        <label for="bg-color">Background Color:</label>
+        <input type="color" id="bg-color" onchange="changeBgColor(this.value)">
+
+        <label for="text-spacing">Text Spacing:</label>
+        <input type="range" id="text-spacing" min="0" max="2" step="0.1" value="0"
+            onchange="changeTextSpacing(this.value)"> <!-- Set to 1 for normal spacing -->
+
+        <label for="contrast">Contrast:</label>
+        <input type="range" id="contrast" min="1" max="3" step="0.1" value="2" onchange="changeContrast(this.value)">
+        <!-- Set to 2 for normal contrast -->
+
+
+        <label for="brightness">Brightness:</label>
+        <input type="range" id="brightness" min="0.5" max="2" step="0.1" value="1.25"
+            onchange="changeBrightness(this.value)">
+
+        <label for="font-style">Font Style:</label>
+        <select id="font-style" onchange="changeFontStyle(this.value)">
+            <option value="Arial">Arial</option>
+            <option value="Verdana">Verdana</option>
+            <option value="Georgia">Georgia</option>
+            <option value="Dyslexie">Dyslexie</option>
+            <option value="Times New Roman">Times New Roman</option>
+            <option value="Courier New">Courier New</option>
+            <option value="Tahoma">Tahoma</option>
+            <option value="Trebuchet MS">Trebuchet MS</option>
+            <option value="Lucida Console">Lucida Console</option>
+        </select>
+
+        <label for="saturation">Saturation:</label>
+        <input type="range" id="saturation" min="0" max="2" step="0.1" value="1"
+            onchange="changeSaturation(this.value)">
+
+        <label for="theme">Theme:</label>
+        <button onclick="toggleTheme()">Toggle Dark/Light Theme</button>
+
+        <label for="alignment">Text Alignment:</label>
+        <select id="alignment" onchange="setAlignment(this.value)">
+            <option value="">Select Alignment</option>
+            <option value="align-left">Left</option>
+            <option value="align-center">Center</option>
+            <option value="align-right">Right</option>
+        </select>
+
+        <label for="highlight-titles">Highlight Titles:</label>
+        <button onclick="highlightTitles()">Highlight</button>
+
+        <label for="speak-text">Text to speech:</label>
+        <button onclick="speakText()"><i class="fa fa-volume-up"></i></button>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
