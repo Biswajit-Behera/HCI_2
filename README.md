@@ -6,5 +6,8 @@ For Source Code implement HCI_2-main/HCI_proj-main in your Local system and Host
 
 
 
-Uploading Developing an eLearning Platform for Computer Science and Dyslexia Students (1).mp4…
+
+
+
+https://github.com/user-attachments/assets/a0151a6f-e7cb-4b0c-99ac-913b8cdca6e9
 
